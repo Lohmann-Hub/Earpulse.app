@@ -10,13 +10,6 @@ Native iOS app that leverages AirPods Pro 3 biometric sensors for real-time hear
 
 ---
 
-## 📋 Quick Links
-
-- **[Privacy Policy](privacy-policy.md)** - Complete privacy and data handling information
-- **[General Information](general-information.md)** - Detailed app features and technical information
-
----
-
 ## 🎯 What is Earpulse?
 
 Earpulse is a heart rate tracking app designed specifically for AirPods Pro 3 users. It provides real-time monitoring, comprehensive history analytics, and seamless integration with Apple HealthKit and Apple Fitness workouts.
@@ -58,9 +51,7 @@ Earpulse is a heart rate tracking app designed specifically for AirPods Pro 3 us
 
 ## 📥 Download
 
-Available now on the App Store.
-
-[![Download on the App Store](https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1733011200)](https://apps.apple.com/app/earpulse)
+Available soon on the App Store.
 
 ---
 
