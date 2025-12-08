@@ -14,7 +14,7 @@ Earpulse ("we," "our," or "us") is committed to protecting your privacy. This Pr
 - **Session Data**: Start time, end time, duration, and calculated statistics (average, minimum, maximum BPM)
 
 ### HealthKit Data
-- The App reads heart rate data from Apple Watch workouts (if available)
+- The App reads heart rate data from workouts in the preinstalled fintess app (if available)
 - The App saves heart rate measurements to Apple's HealthKit
 - All HealthKit data is managed by Apple and subject to Apple's Privacy Policy
 
@@ -85,7 +85,7 @@ Specifically:
 
 ## Children's Privacy
 
-The App is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.
+The App is not intended for children under the age of 15. We do not knowingly collect personal information from children under 15. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.
 
 ## Changes to This Privacy Policy
 
@@ -110,7 +110,7 @@ If you have any questions or concerns about this Privacy Policy or our data prac
 
 **Developer:** Maximilian Lohmann  
 **App:** Earpulse  
-**Contact:** [Your email address or App Store contact method]
+**Contact:** journeybym@gmx.de
 
 ## Compliance
 
