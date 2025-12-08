@@ -1,6 +1,6 @@
 # Privacy Policy for Earpulse
 
-**Last Updated:** January 2025
+**Last Updated:** December 2025
 
 ## Introduction
 
