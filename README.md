@@ -60,8 +60,8 @@ Available soon on the App Store.
 For questions, feedback, or support, please contact us through the App Store.
 
 **Documentation:**
-- [Privacy Policy](Earpulse.app/1_Privacy_Policy.md) - Data handling and privacy practices
-- [General Information](Earpulse.app/2_General_Information.md) - Features, requirements, and technical details
+- [Privacy Policy](2_Privacy_Policy.md) - Data handling and privacy practices
+- [General Information](1_General_Information.md) - Features, requirements, and technical details
 
 ---
 
