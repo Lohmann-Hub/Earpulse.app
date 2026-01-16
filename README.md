@@ -4,7 +4,7 @@
 
 Native iOS app that leverages AirPods Pro 3 biometric sensors for real-time heart rate monitoring and comprehensive health tracking.
 
-![iOS](https://img.shields.io/badge/iOS-17.0+-blue.svg)
+![iOS](https://img.shields.io/badge/iOS-26.0+-blue.svg)
 ![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)
 ![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)
 
@@ -23,15 +23,14 @@ Earpulse is a heart rate tracking app designed specifically for AirPods Pro 3 us
 - **Real-time heart rate tracking** with animated EKG visualization
 - **7-day history** with Apple-style charts and statistics
 - **Activity tagging** across 7 different activity types
-- **Apple Fitness integration** - view Apple Watch workout data
-- **Local data storage** - all data stays on your device
-- **Full HealthKit integration** for secure data management
+- **Apple Fitness integration** - view Apple Health workout data
+- **Secure data storage** - all data stays in your iCloud
 
 ---
 
 ## 📱 Requirements
 
-- iOS 17.0 or later
+- iOS 26.0 or later
 - AirPods Pro 3 (2025) with biometric sensors
 - iPhone compatible with AirPods Pro 3
 
@@ -39,10 +38,9 @@ Earpulse is a heart rate tracking app designed specifically for AirPods Pro 3 us
 
 ## 🔒 Privacy at a Glance
 
-- ✅ All data stored **locally on your device**
+- ✅ All data stored **in your iCloud**
 - ✅ **No data transmission** to external servers
 - ✅ **No third-party data sharing**
-- ✅ Full HealthKit integration for secure data management
 - ✅ Transparent privacy practices
 
 **[Read full Privacy Policy →](2_Privacy_Policy.md)**
@@ -51,14 +49,13 @@ Earpulse is a heart rate tracking app designed specifically for AirPods Pro 3 us
 
 ## 📥 Download
 
-Available soon on the App Store.
+Available on the App Store.
 
 ---
 
 ## 💬 Support
 
-For questions, feedback, or support, please contact us through the App Store.
-
+For questions, feedback, or support, please contact us: journeybym@gmx.de
 **Documentation:**
 - [Privacy Policy](2_Privacy_Policy.md) - Data handling and privacy practices
 - [General Information](1_General_Information.md) - Features, requirements, and technical details
