@@ -56,6 +56,7 @@ Available on the App Store.
 ## 💬 Support
 
 For questions, feedback, or support, please contact us: journeybym@gmx.de
+
 **Documentation:**
 - [Privacy Policy](2_Privacy_Policy.md) - Data handling and privacy practices
 - [General Information](1_General_Information.md) - Features, requirements, and technical details
