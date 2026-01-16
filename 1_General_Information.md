@@ -3,7 +3,7 @@ Heart rate tracking app for AirPods Pro 3 users. Real-time monitoring, activity 
 
 Earpulse is a native iOS app that leverages the advanced biometric sensors in AirPods Pro 3 (2025) to provide real-time heart rate monitoring and comprehensive health tracking. Designed specifically for users without an Apple Watch, Earpulse offers a simple, unobtrusive way to monitor your heart health throughout the day.
 
-![iOS](https://img.shields.io/badge/iOS-17.0+-blue.svg)
+![iOS](https://img.shields.io/badge/iOS-26.0+-blue.svg)
 ![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)
 ![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)
 
@@ -21,7 +21,7 @@ Earpulse is a native iOS app that leverages the advanced biometric sensors in Ai
 - Beautiful Apple-style charts with colored bars for session ranges
 - **Statistics cards**: Average, Minimum, Maximum BPM per session
 - Activity-based filtering (7 predefined activity types)
-- Data source filtering: All Sources, Earpulse, or Apple Watch Workouts
+- Data source filtering: All Sources, Earpulse, or Apple Health Workouts
 - Detailed session list with BPM range, timestamp, duration, and activity badges
 
 ### Activity Tagging
@@ -49,7 +49,7 @@ Track your heart rate across different activities:
 
 ## 🔒 Privacy & Security
 
-- **Local storage**: All data stored locally on your device using SwiftData
+- **Local storage**: All data stored in your iCloud
 - **HealthKit integration**: Full integration with Apple's HealthKit for secure data management
 - **No cloud sync**: No cloud synchronization without your explicit consent
 - **Data persistence**: Your data remains safe through app updates
@@ -57,7 +57,7 @@ Track your heart rate across different activities:
 
 ## 📱 Requirements
 
-- **iOS**: 17.0 or later
+- **iOS**: 26.0 or later
 - **Hardware**: AirPods Pro 3 (2025) with biometric sensors
 - **Device**: iPhone compatible with AirPods Pro 3
 - **HealthKit**: HealthKit access required for heart rate tracking
@@ -66,7 +66,7 @@ Track your heart rate across different activities:
 
 - AirPods Pro 3 users without an Apple Watch
 - Health-conscious individuals seeking unobtrusive monitoring
-- Users who prefer ear-based sensors over wrist-based wearables
+- Users who prefer ear-based sensors over wrist-based wearables because of you beautiful classic watch for example
 - Anyone wanting to track heart rate throughout the day with activity context
 
 ## 🚀 Technical Highlights
@@ -88,7 +88,7 @@ Available soon on the App Store.
 
 For questions, feedback, bug reports, or feature requests, please contact us through:
 - **App Store**: Leave a review or contact through the App Store
-- **Email**: [Your support email if available]
+- **Email**: [journeybym@gmx.de]
 
 ## 📄 License
 
