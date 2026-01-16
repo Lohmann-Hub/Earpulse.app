@@ -1,6 +1,6 @@
 # Privacy Policy for Earpulse
 
-**Last Updated:** December 2025
+**Last Updated:** January 2025
 
 ## Introduction
 
@@ -14,7 +14,7 @@ Earpulse ("we," "our," or "us") is committed to protecting your privacy. This Pr
 - **Session Data**: Start time, end time, duration, and calculated statistics (average, minimum, maximum BPM)
 
 ### HealthKit Data
-- The App reads heart rate data from workouts in the preinstalled fintess app (if available)
+- The App reads heart rate data from workouts in the preinstalled fitness app (if available)
 - The App saves heart rate measurements to Apple's HealthKit
 - All HealthKit data is managed by Apple and subject to Apple's Privacy Policy
 
@@ -29,15 +29,23 @@ We use the information we collect to:
 - Display your heart rate history and statistics
 - Enable activity-based filtering and analysis
 - Integrate with Apple HealthKit for comprehensive health tracking
+- Synchronize your data across your devices using iCloud
 - Improve app functionality and user experience
 
 ## Data Storage and Security
 
+### iCloud/CloudKit Storage
+- All app data is stored securely in **your iCloud account** using Apple's CloudKit framework
+- Data is automatically synchronized across all your devices signed in with the same Apple ID
+- Your data is encrypted both in transit and at rest by Apple
+- Data synchronization requires you to be signed in to iCloud on your device
+- **We do not have access to your iCloud data** - it is managed entirely by Apple
+- Your data persists through app updates and device changes
+
 ### Local Storage
-- All app data is stored **locally on your device** using SwiftData
-- Data is stored in the app's Documents directory
-- Your data persists through app updates
-- **We do not transmit your data to external servers**
+- Data is also cached locally on your device for offline access
+- Local data is stored in the app's Documents directory using SwiftData
+- Local cache is automatically synchronized with iCloud when online
 
 ### HealthKit Integration
 - Heart rate data is saved to Apple's HealthKit
@@ -46,10 +54,11 @@ We use the information we collect to:
 - HealthKit data is subject to Apple's Privacy Policy
 
 ### Data Security
-- All data is stored locally on your device
-- No cloud synchronization is performed without your explicit consent
-- We do not have access to your personal health data
-- Your data remains private and secure
+- All data is encrypted using Apple's iCloud encryption standards
+- Data synchronization is handled securely by Apple's CloudKit infrastructure
+- We do not have access to your personal health data stored in iCloud
+- Your data remains private and secure, accessible only to you through your Apple ID
+- Data is automatically backed up as part of your iCloud account
 
 ## Data Sharing and Disclosure
 
@@ -59,25 +68,36 @@ Specifically:
 - ❌ We do not use analytics tools
 - ❌ We do not use advertising networks
 - ❌ We do not use third-party SDKs that collect data
-- ❌ We do not transmit data to external servers
+- ❌ We do not transmit data to external servers (beyond Apple's iCloud infrastructure)
 - ❌ We do not sell your data
 
 ### Apple Services
+- Data stored in iCloud/CloudKit is managed by Apple
 - Data stored in HealthKit is managed by Apple
-- HealthKit data access is controlled by you through iOS Settings
-- Apple's Privacy Policy applies to HealthKit data
+- iCloud and HealthKit data access is controlled by you through iOS Settings
+- Apple's Privacy Policy applies to iCloud and HealthKit data
+- Data synchronization across devices is handled by Apple's CloudKit service
 
 ## Your Rights and Choices
 
 ### Access and Control
 - You can view all your data within the App
 - You can delete individual sessions or all data through the App
+- You can control iCloud synchronization through iOS Settings → [Your Name] → iCloud
 - You can control HealthKit access through iOS Settings → Privacy → Health
 
 ### Data Deletion
 - You can delete sessions using the App's delete functionality
+- Deleted data is removed from both local storage and iCloud
 - You can delete all app data by uninstalling the App
+- You can disable iCloud synchronization for the App in iOS Settings
 - HealthKit data can be managed through iOS Settings
+
+### iCloud Synchronization
+- iCloud synchronization is automatically enabled when you are signed in to iCloud
+- You can disable iCloud synchronization for the App at any time through iOS Settings
+- Disabling iCloud sync will only affect future data; existing iCloud data remains until manually deleted
+- Data synchronization requires an active internet connection
 
 ### HealthKit Permissions
 - You can grant or revoke HealthKit permissions at any time
@@ -95,14 +115,6 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 - For significant changes, we may provide additional notice
 
 You are advised to review this Privacy Policy periodically for any changes.
-
-## Future Features
-
-### CloudKit Synchronization (Planned)
-- In future versions, we may offer optional iCloud/CloudKit synchronization
-- This feature will be **opt-in only**
-- You will be notified before any cloud synchronization is enabled
-- This Privacy Policy will be updated to reflect cloud synchronization features
 
 ## Contact Us
 
@@ -126,7 +138,7 @@ By using the App, you consent to this Privacy Policy. If you do not agree with t
 
 ---
 
-**Effective Date:** December 2025  
-**Last Updated:** December 2025
+**Effective Date:** January 2025  
+**Last Updated:** January 2025
 
 © 2025 Maximilian Lohmann. All rights reserved.
