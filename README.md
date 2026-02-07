@@ -43,10 +43,6 @@ z## 🔒 Privacy & Legal
 - ✅ **No third-party data sharing**
 - ✅ Transparent privacy practices
 
-**Legal documents:**
-- [Privacy Policy](2_Privacy_Policy.md) – Data handling and privacy practices
-- [Terms of Service](3_Terms_of_Service.md) – Terms of use for the app
-
 ---
 
 ## 📥 Download
