@@ -88,7 +88,7 @@ Available soon on the App Store.
 
 For questions, feedback, bug reports, or feature requests, please contact us through:
 - **App Store**: Leave a review or contact through the App Store
-- **Email**: [journeybym@gmx.de]
+- **Email**: journeybym@gmx.de
 
 ## 📄 License
 
