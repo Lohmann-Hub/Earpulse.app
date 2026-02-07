@@ -36,7 +36,7 @@ Earpulse is a heart rate tracking app designed specifically for AirPods Pro 3 us
 
 ---
 
-z## 🔒 Privacy & Legal
+## 🔒 Privacy & Legal
 
 - ✅ All data stored **in your iCloud**
 - ✅ **No data transmission** to external servers
