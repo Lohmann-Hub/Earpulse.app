@@ -138,7 +138,7 @@ By using the App, you consent to this Privacy Policy. If you do not agree with t
 
 ---
 
-**Effective Date:** January 2025  
-**Last Updated:** January 2025
+**Effective Date:** January 2026
+**Last Updated:** January 2026
 
 © 2025 Maximilian Lohmann. All rights reserved.
