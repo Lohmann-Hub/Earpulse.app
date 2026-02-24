@@ -8,11 +8,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
   <style>
-    :root { --red: #ff3b30; --pink: #ff6b6b; --bg: #0a0a0f; --surface: #13131a; --surface2: #1c1c28; --border: rgba(255,255,255,0.08); --text: #f0f0f5; --muted: #8888a0; --accent: #ff3b30; }
+    :root { --red: #ff281c; --pink: #ff60ab; --bg: #0a0a0f; --surface: #13131a; --surface2: #1c1c28; --border: rgba(255,255,255,0.08); --text: #f0f0f5; --muted: #8888a0; --accent: #ff281c; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif; line-height: 1.6; overflow-x: hidden; }
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(10,10,15,0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
-    .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-family: 'Instrument Serif', serif; font-size: 20px; font-weight: 400; letter-spacing: -0.5px; }
+    .nav-logo a { color: #fff; text-decoration: none; }
+    .nav-logo a:hover { opacity: 0.9; }
     .nav-links { display: flex; gap: 32px; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--text); }
@@ -22,16 +24,13 @@
     .hero::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255,59,48,0.15) 0%, transparent 70%); pointer-events: none; }
     .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,59,48,0.12); border: 1px solid rgba(255,59,48,0.3); border-radius: 20px; padding: 6px 14px; font-size: 13px; color: var(--pink); font-weight: 500; margin-bottom: 28px; }
     .hero h1 { font-size: clamp(52px, 8vw, 96px); font-weight: 800; letter-spacing: -3px; line-height: 1; margin-bottom: 20px; background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.6) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero h1 span { font-family: 'Instrument Serif', serif; background: linear-gradient(135deg, var(--red), var(--pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero h1 .hero-earpulse { font-family: 'Instrument Serif', serif; font-weight: 400; color: #fff; background: none; -webkit-background-clip: unset; -webkit-text-fill-color: #fff; background-clip: unset; }
     .hero-sub { font-size: 20px; color: var(--muted); max-width: 560px; margin: 0 auto 40px; font-weight: 400; }
     .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
     .btn-primary { background: var(--red); color: #fff; border: none; border-radius: 14px; padding: 16px 32px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.15s, opacity 0.2s; }
     .btn-primary:hover { transform: translateY(-1px); opacity: 0.9; }
     .btn-secondary { background: rgba(255,255,255,0.06); color: var(--text); border: 1px solid var(--border); border-radius: 14px; padding: 16px 32px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s; }
     .btn-secondary:hover { background: rgba(255,255,255,0.1); }
-    .ekg-container { width: 100%; max-width: 600px; margin: 60px auto 0; opacity: 0.5; }
-    .ekg-line { stroke: var(--red); stroke-width: 2; fill: none; stroke-dasharray: 1000; animation: dash 3s linear infinite; }
-    @keyframes dash { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
     .bpm-badge { margin-top: 20px; display: inline-flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px 20px; font-size: 14px; font-weight: 600; color: var(--text); }
     .bpm-dot { width: 8px; height: 8px; background: var(--red); border-radius: 50%; animation: pulse 1s ease-in-out infinite; }
     @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.6; } }
@@ -52,56 +51,45 @@
     .activity-pill:hover { border-color: rgba(255,59,48,0.4); transform: translateY(-2px); }
     .activity-pill .emoji { font-size: 28px; display: block; margin-bottom: 8px; }
     .activity-pill span { font-size: 13px; font-weight: 500; color: var(--muted); }
-    .privacy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 50px; }
-    .privacy-item { display: flex; gap: 16px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
-    .privacy-icon { font-size: 22px; flex-shrink: 0; }
-    .privacy-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-    .privacy-item p { font-size: 13px; color: var(--muted); }
     .req-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 40px; display: flex; gap: 40px; flex-wrap: wrap; margin-top: 50px; }
     .req-item { flex: 1; min-width: 180px; }
     .req-item .label { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 8px; }
     .req-item .value { font-size: 18px; font-weight: 700; }
     .req-item .value span { color: var(--red); }
-    .tech-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+    .tech-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; justify-content: center; }
     .tech-pill { background: var(--surface); border: 1px solid var(--border); border-radius: 30px; padding: 10px 20px; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 8px; }
     .tech-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
     .cta-section { text-align: center; padding: 120px 24px; background: radial-gradient(ellipse at center, rgba(255,59,48,0.08) 0%, transparent 70%); }
     .cta-section h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; letter-spacing: -2px; margin-bottom: 20px; }
     .cta-section p { color: var(--muted); font-size: 18px; margin-bottom: 40px; }
     footer { border-top: 1px solid var(--border); padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer-logo { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; }
-    .footer-links { display: flex; gap: 24px; }
+    .footer-logo { display: flex; align-items: center; gap: 8px; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 16px; color: #fff; flex: 1; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; flex: 1; }
     .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
     .footer-links a:hover { color: var(--text); }
-    .footer-copy { color: var(--muted); font-size: 13px; }
+    .footer-copy { color: var(--muted); font-size: 13px; flex: 1; text-align: right; }
     .divider { width: 100%; height: 1px; background: var(--border); }
   </style>
 </head>
 <body>
 <nav>
-  <div class="nav-logo">Earpulse</div>
+  <div class="nav-logo"><a href="#" title="Back to top">Earpulse</a></div>
   <div class="nav-links">
     <a href="#features">Features</a>
     <a href="#activities">Activities</a>
-    <a href="#privacy">Privacy</a>
     <a href="#requirements">Requirements</a>
   </div>
-  <a href="#download" class="nav-cta">Download</a>
+  <a href="https://apps.apple.com/at/app/earpulse/id6755965397" class="nav-cta" target="_blank" rel="noopener noreferrer">Download</a>
 </nav>
 <section class="hero">
-  <div class="hero-badge">🎧 Built for AirPods Pro 3 · 2025</div>
-  <h1><span>Earpulse</span></h1>
-  <p class="hero-sub">Real-time heart rate tracking, beautifully designed for AirPods Pro 3 users — no Apple Watch needed.</p>
+  <div class="hero-badge">Built for AirPods Pro 3. Generation</div>
+  <h1><span class="hero-earpulse">Earpulse</span></h1>
+  <p class="hero-sub">Track your heart rate whenever and how long you want.</p>
   <div class="hero-actions">
-    <a href="#download" class="btn-primary">📥 Download on App Store</a>
+    <a href="https://apps.apple.com/at/app/earpulse/id6755965397" class="btn-primary" target="_blank" rel="noopener noreferrer">Download on App Store</a>
     <a href="#features" class="btn-secondary">Explore Features →</a>
   </div>
-  <div class="ekg-container">
-    <svg viewBox="0 0 600 80" xmlns="http://www.w3.org/2000/svg">
-      <polyline class="ekg-line" points="0,40 60,40 80,40 90,10 100,70 110,20 120,40 180,40 200,40 210,12 220,68 230,22 240,40 300,40 320,40 330,8 340,72 350,18 360,40 420,40 440,40 450,10 460,70 470,20 480,40 540,40 560,40 570,12 580,68 590,22 600,40" />
-    </svg>
-  </div>
-  <div class="bpm-badge"><span class="bpm-dot"></span>Live · 72 BPM</div>
+  <div class="bpm-badge"><span class="bpm-dot"></span>Live · 69 BPM</div>
 </section>
 <section id="features">
   <div class="container">
@@ -136,20 +124,6 @@
   </div>
 </section>
 <div class="divider"></div>
-<section id="privacy">
-  <div class="container">
-    <p class="section-label">Privacy &amp; Security</p>
-    <h2 class="section-title">Your health data<br/>stays yours.</h2>
-    <p class="section-sub">Earpulse is built on a foundation of privacy — no data leaves your device without your consent.</p>
-    <div class="privacy-grid">
-      <div class="privacy-item"><div class="privacy-icon">🔒</div><div><h4>Local iCloud Storage</h4><p>All data is stored in your personal iCloud — never on our servers.</p></div></div>
-      <div class="privacy-item"><div class="privacy-icon">❤️‍🩹</div><div><h4>HealthKit Integration</h4><p>Full integration with Apple's HealthKit for secure, encrypted data management.</p></div></div>
-      <div class="privacy-item"><div class="privacy-icon">🚫</div><div><h4>No Cloud Sync</h4><p>No cloud synchronization without your explicit consent. Ever.</p></div></div>
-      <div class="privacy-item"><div class="privacy-icon">🛡</div><div><h4>Data Persistence</h4><p>Your data remains safe and intact through every app update.</p></div></div>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
 <section id="requirements">
   <div class="container">
     <p class="section-label">Requirements</p>
@@ -160,10 +134,8 @@
       <div class="req-item"><div class="label">Device</div><div class="value">Any <span>iPhone</span> compatible with AirPods Pro 3</div></div>
       <div class="req-item"><div class="label">Permissions</div><div class="value"><span>HealthKit</span> access</div></div>
     </div>
-    <p class="section-label" style="margin-top: 60px;">Technical Highlights</p>
+    <p class="section-label" style="margin-top: 60px;">Benefits</p>
     <div class="tech-pills">
-      <div class="tech-pill"><span class="dot"></span>Native SwiftUI</div>
-      <div class="tech-pill"><span class="dot"></span>Swift 6 Language Mode</div>
       <div class="tech-pill"><span class="dot"></span>AirPods Pro 3 Biometric Sensors</div>
       <div class="tech-pill"><span class="dot"></span>HealthKit Integration</div>
       <div class="tech-pill"><span class="dot"></span>No Mini-Workout Clutter</div>
@@ -177,7 +149,7 @@
     <h2>Your heart. <span style="color:var(--red)">Heard.</span></h2>
     <p>Download Earpulse and start monitoring your heart rate the beautiful, unobtrusive way.</p>
     <div class="hero-actions">
-      <a href="mailto:journeybym@gmx.de" class="btn-secondary">✉️ Contact Support</a>
+      <a href="mailto:journeybym@gmx.de" class="btn-secondary">Contact Support</a>
     </div>
   </div>
 </section>
@@ -186,8 +158,6 @@
   <div class="footer-links">
     <a href="2_Privacy_Policy.md">Privacy Policy</a>
     <a href="3_Terms_of_Service.md">Terms of Service</a>
-    <a href="1_General_Information.md">General Info</a>
-    <a href="mailto:journeybym@gmx.de">Contact</a>
   </div>
   <div class="footer-copy">© 2025 Maximilian Lohmann. All rights reserved.</div>
 </footer>
